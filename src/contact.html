@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
+        <a href="#maincontent" class="skip-link">Aller au contenu principal</a>
         <!-- contenu identique sur toutes les pages-->
         <header>
             <h1><a href="./index.html">Grégory O'Clock</a></h1>
@@ -30,18 +31,18 @@
                 <input type="checkbox" class="burger-checkbox">
             </label>  
             <!-- barre de nav derriere le label burger -->
-            <nav class="menu">
+            <nav class="menu" aria-label="main menu">
                 <ul>
                     <li><a href="./index.html">Accueil</a></li>
                     <li><a href="./about.html">À propos de moi</a></li>
                     <li><a href="./portfolio.html">Portfolio</a></li>
-                    <li><a href="./contact.html">Me contacter</a></li>
+                    <li><a aria-current="page" href="./contact.html">Me contacter</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- contenu principal de la page-->
-        <main>
+        <main id="maincontent">
             <h2>Contact</h2>
 
             <ul class="contact-list">
@@ -107,7 +108,7 @@
         <footer>
             <p>Grégory 2025 - réalisé en HTML et CSS avec 💓</p>
 
-            <nav>
+            <nav aria-label="footer menu">
                 <ul>
                     <li><a href="mailto:nowhere@mozilla.org">M'envoyer un mail</a></li>
                     <li><a href="https://github.com/gregoclock">Mon Github</a></li>
