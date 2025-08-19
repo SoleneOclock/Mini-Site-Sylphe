@@ -166,11 +166,28 @@ figure::after {
 	gap: 1.5rem;
 }
 
+/* on met en display flex les elements qui sont dan sle container : les 4 inputs prenom, nom, email, tel */
+.form-cols-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.form-cols-container div {
+	width: 100%;
+	padding-right: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+
 /* on passe en mode tablette */
 @media (width > 576px) {
 	.figure-container {
 		/* 2 colones */
 		grid-template-columns: 1fr 1fr;
+	}
+
+	.form-cols-container div {
+		/* 2 inputs par ligne */
+		width: 50%;
 	}
 }
 
@@ -180,15 +197,4 @@ figure::after {
 		/* 3 colones */
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-}
-
-/* on met en display flex les elements qui sont dan sle container : les 4 inputs prenom, nom, email, tel */
-.form-cols-container {
-	display: flex;
-	flex-wrap: wrap;
-}
-.form-cols-container div {
-	width: 50%;
-	padding-right: 1rem;
-	padding-bottom: 0.5rem;
 }
