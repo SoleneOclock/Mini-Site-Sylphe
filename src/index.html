@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Le site web de Greg Oclock">
+        <title>Mon site personnel</title>
+
+        <!-- on lie la police Leckerli One direct depuis les serveurs google font, on aurait pu aussi télécharger la police dans le projet et la charger en CSS avec @font-face -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+
+        <!-- on lie les feuilles de style -->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <!-- la balise sémantique sert au robots de référencement : google bots, et à l'accessibilité : pour les personnes malvoyantes -->
+        <header class="main_header">
+            
+            <!-- 
+                un lien vers la page d'accueil 
+                en relatif : ./index.html ou index.html
+                en absolu : http://127.0.0.1:5500/index.html
+                en absolu : /index.html
+            -->
+            <h1><a href="./index.html">Grégory O'Clock</a></h1>
+
+            <h2>Formateur Île de France</h2>
+
+            <!-- BONUS une extension `emmet` permet de générer une structure HTML -->
+            <!-- ul>(li>a)*3 -->
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./about.html">À propos de moi</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./contact.html">Me contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Bienvenue 👋 sur mon portfolio</h2>
+
+            <img src="./img/gregoclock.jpeg" alt="Un capoeiriste regardant vers le couchant !" class="portrait">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic nemo facere modi. Consequuntur exercitationem consectetur, deserunt nihil dolores placeat, quaerat asperiores, non necessitatibus reiciendis nobis distinctio voluptas provident dolor! Est.</p>
+            
+            <p>Labore pariatur perferendis est provident quidem tempore ducimus nihil aliquid nam. Dicta nam consequuntur officiis impedit amet aliquid consequatur veritatis ab, a eveniet laudantium alias obcaecati illum animi optio modi!</p>
+            
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, laudantium iure sint, quis facere eaque magnam nobis obcaecati soluta optio libero delectus temporibus, ipsam nihil quidem sit! Quisquam, quasi. Modi.
+            N'hésitez pas à <a href="/contact.html">me contacter</a> !</p>
+
+            <video class="video" src="./video/flower.webm" controls width="500" ></video>
+            <audio src="./audio/t-rex-roar.mp3" controls></audio>
+        </main>
+
+        <footer>
+            <p>Grégory 2025 - réalisé en HTML et CSS avec 💓</p>
+    
+            <nav>
+                <ul>
+                    <li><a href="mailto:nowhere@mozilla.org">M'envoyer un mail</a></li>
+                    <li><a href="https://github.com/gregoclock">Mon Github</a></li>
+                    <li><a href="https://linkedin.com/gregoclock">Mon profil linkedIn</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+    </body>
+</html>

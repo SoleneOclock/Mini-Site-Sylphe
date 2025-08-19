@@ -1,0 +1,173 @@
+body {
+	/* pour changer la police sur tous les element on change sur le body, comme c'est une propriété héritée ça va faire effet sur tous les enfants du body */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Leckerli One", cursive;
+	font-weight: normal;
+	margin-bottom: 0.5rem;
+}
+
+a {
+	/* ecraser la feuille de style du navigateur qui place un souligné sur les balises a */
+	text-decoration: none;
+	font-weight: bold;
+	color: #2f3f83;
+}
+
+a:hover {
+	color: rgb(192, 53, 192);
+}
+
+h1 {
+	font-size: 3rem;
+	text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+h1 a {
+	color: #2b2b2b;
+}
+
+/* on place les items de liste des menus en inline pour qu'ils se placent cote à cote */
+nav li {
+	display: inline-block;
+	padding: 1rem;
+}
+
+header {
+	/* le header a un fond bleu et le text est centré */
+	background-color: #99babe;
+	text-align: center;
+
+	/* on veut qu'il reste tout le temps visible en haut de la page */
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	/* on peut choisir la place du calque sur lequel le header se positionne, vu qu'il y aura d'autree lements positionnés dans la page (les figures) on veut qu'il reste au dessus */
+	z-index: 1;
+}
+
+main {
+	width: 80%;
+	margin: 1rem auto;
+}
+
+p {
+	margin-bottom: 1rem;;
+}
+
+.video {
+	width: 100%;
+}
+
+.portrait {
+	/* on veut que l'image flotte à gauche du texte */
+	float: left;
+	width: 20%;
+	margin-top: 0.2rem;
+	margin-right: 1rem;
+	border-radius: 1rem;
+}
+
+.contact-list {
+	margin: 1rem auto;
+	width: 70%;
+}
+.contact-list__item {
+	display: flex;
+	gap: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+.icon {
+	width: 1rem;
+}
+
+footer {
+	background-color: #333333;
+	color: #ffffff;
+	text-align: center;
+	padding: 1rem;
+}
+
+label, input, textarea {
+	display: block;
+	width: 100%;
+}
+
+.inline {
+	display: inline;
+	width: auto;
+}
+
+footer a {
+	color:  #FFF;
+}
+
+figure {
+
+	width: 100%;
+	background-color: #333333;
+	border-radius: 1rem;
+	padding-bottom: 0.5rem;
+
+	/* on place la figure en relative, ça ne change rien à son positionnement à elle mais ça la rend parent pour positionner la figcaption en absolute */
+	position: relative;
+}
+
+figure img {
+	padding: 0.5rem;
+}
+
+figure figcaption {
+	background-color: rgba(80, 80, 80, 0.9);
+	color: #FFF;
+	padding: 1rem;
+	margin: 0.5rem;
+
+	/* on veut qu'elle recouvre toute la figure : qu'elle passe devant sur un autre calque */
+	position: absolute;
+	top: 0;
+	bottom: 1.5rem;
+
+	/* de base on cache les figcaption, elle ne sont pas affichées */
+	display: none;
+}
+
+/* dès qu'on passe la souris au dessus d'une figure on veut que sa figcaption s'affiche */
+figure:hover figcaption {
+	display: block;
+}
+
+/* on va ajouter un element sous la figure pour styliser le petit point blanc : un pseudo element car pas d’intérêt semantic */
+figure::after {
+	content: ""; /* propriété content obligatoire meme si vide */
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 50%;
+	margin: 0.5rem auto;
+}
+
+.figure-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+/* on met en display flex les elements qui sont dan sle container : les 4 inputs prenom, nom, email, tel */
+.form-cols-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.form-cols-container div {
+	width: 50%;
+	padding-right: 1rem;
+	padding-bottom: 0.5rem;
+}

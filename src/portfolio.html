@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Le site web de Greg Oclock">
+        <title>Mon site personnel</title>
+
+        <!-- on lie la police Leckerli One direct depuis les serveurs google font, on aurait pu aussi télécharger la police dans le projet et la charger en CSS avec @font-face -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+
+        <!-- on lie la feuille de style -->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <!-- la balise sémantique sert au robots de référencement : google bots, et à l'accessibilité : pour les personnes malvoyantes -->
+        <header>
+            
+            <!-- 
+                un lien vers la page d'accueil 
+                en relatif : ./index.html ou index.html
+                en absolu : http://127.0.0.1:5500/index.html
+                en absolu : /index.html
+            -->
+            <h1><a href="./index.html">Grégory O'Clock</a></h1>
+
+            <h2>Formateur Île de France</h2>
+
+            <!-- BONUS une extension `emmet` permet de générer une structure HTML -->
+            <!-- ul>(li>a)*3 -->
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./about.html">À propos de moi</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./contact.html">Me contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Portfollio - mes réalisations</h2>
+
+            <div class="figure-container">
+                <figure class="rea">
+                    <img src="./img/rea1.png" alt="site Hero Corp avec un logo, un fond gris" />
+                    <figcaption>Réalisation d'un super site en html pour Hero Corp</figcaption>
+                </figure>
+
+                <figure class="rea">
+                    <img src="./img/rea2.png" alt="site Oclock student news avec des blocs de couleurs" />
+                    <figcaption>Réalisation d'un super site en CSS pour les étudiants de l'école Oclock</figcaption>
+                </figure>
+
+                <figure class="rea">
+                    <img src="./img/rea3.png" alt="site Ofig de vente de figurines" />
+                    <figcaption>Réalisation d'un site HTML CSS boutique en ligne de figurines final fantasy</figcaption>
+                </figure>
+
+                <figure class="rea">
+                    <img src="./img/rea1.png" alt="site Hero Corp avec un logo, un fond gris" />
+                    <figcaption>Réalisation d'un super site en html pour Hero Corp</figcaption>
+                </figure>
+
+                <figure class="rea">
+                    <img src="./img/rea2.png" alt="site Oclock student news avec des blocs de couleurs" />
+                    <figcaption>Réalisation d'un super site en CSS pour les étudiants de l'école Oclock</figcaption>
+                </figure>
+
+                <figure class="rea">
+                    <img src="./img/rea3.png" alt="site Ofig de vente de figurines" />
+                    <figcaption>Réalisation d'un site HTML CSS boutique en ligne de figurines final fantasy</figcaption>
+                </figure>
+
+                <figure class="rea">
+                    <img src="./img/rea1.png" alt="site Hero Corp avec un logo, un fond gris" />
+                    <figcaption>Réalisation d'un super site en html pour Hero Corp</figcaption>
+                </figure>
+
+                <figure class="rea">
+                    <img src="./img/rea2.png" alt="site Oclock student news avec des blocs de couleurs" />
+                    <figcaption>Réalisation d'un super site en CSS pour les étudiants de l'école Oclock</figcaption>
+                </figure>
+
+                <figure class="rea">
+                    <img src="./img/rea3.png" alt="site Ofig de vente de figurines" />
+                    <figcaption>Réalisation d'un site HTML CSS boutique en ligne de figurines final fantasy</figcaption>
+                </figure>
+            </div>
+        </main>
+
+        <footer>
+          <p>Grégory 2025 - réalisé en HTML et CSS avec 💓</p>
+  
+          <nav>
+              <ul>
+                  <li><a href="mailto:nowhere@mozilla.org">M'envoyer un mail</a></li>
+                  <li><a href="https://github.com/gregoclock">Mon Github</a></li>
+                  <li><a href="https://linkedin.com/gregoclock">Mon profil linkedIn</a></li>
+              </ul>
+          </nav>
+        </footer>
+
+    </body>
+</html>

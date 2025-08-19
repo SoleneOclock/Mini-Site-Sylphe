@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Le site web de Greg Oclock - contactez moi">
+        <title>Contact</title>
+
+        <!-- on lie la police Leckerli One direct depuis les serveurs google font, on aurait pu aussi télécharger la police dans le projet et la charger en CSS avec @font-face -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+
+        <!-- on lie la feuille de style -->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <!-- contenu identique sur toutes les pages-->
+        <header>
+            <h1><a href="./index.html">Grégory O'Clock</a></h1>
+
+            <h2>Formateur Île de France</h2>
+
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./about.html">À propos de moi</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./contact.html">Me contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- contenu principal de la page-->
+        <main>
+            <h2>Contact</h2>
+
+            <ul class="contact-list">
+                <li class="contact-list__item"><img class="icon" src="./img/user.svg">Greg O'clock</li>
+                <li class="contact-list__item"><img class="icon" src="./img/at-sign.svg"><a href="mailto:greg@oclock.io">greg@oclock.io</a></li>
+                <li class="contact-list__item"><img class="icon" src="./img/mail.svg"><a href="tel:0606060606">06 06 06 06 06</a></li>
+                <li class="contact-list__item"><img class="icon" src="./img/phone.svg">42 allée des Roses, 98000 Saint Bidule Sur Truc</li>
+            </ul>
+
+            <h3>Formulaire de contact</h3>
+
+            <form action="./contact.html">
+                <!-- le label est très fortement conseillé pour l'accessibilité et pour le seo -->
+                <div>
+                    <input type="radio" name="genre" id="homme" class="inline">
+                    <label for="homme" class="inline">Homme</label>
+
+                    <input type="radio" name="genre" id="femme" class="inline">
+                    <label for="femme" class="inline">Femme</label>
+                </div>
+
+                <div class="form-cols-container">
+                    <div>
+                        <label for="prenom">Prénom :</label>
+                        <input id="prenom" name="prenom" type="text" />
+                    </div>
+
+                    <div>
+                        <label for="nom">Nom :</label>
+                        <input id="nom" name="nom" type="text" />
+                    </div>
+
+                    <div>
+                        <label for="email">Email :</label>
+                        <input id="email" name="email" type="email"/>
+                    </div>
+
+                    <div>
+                        <label for="téléphone">Téléphone :</label>
+                        <input id="téléphone" name="téléphone" type="téléphone"/>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+
+                <div>
+                    <label class="inline" for="accept">Acceptez vous l'envoie des données à nos partenaires ?</label>
+                    <input class="inline" type="checkbox" name="accept" id="accept" checked>
+                </div>
+
+                <div>
+                    <button type="submit">Envoyer</button>
+                </div>
+
+            </form>
+        </main>
+        
+
+        <!-- contenu identique sur toutes les pages -->
+        <footer>
+            <p>Grégory 2025 - réalisé en HTML et CSS avec 💓</p>
+
+            <nav>
+                <ul>
+                    <li><a href="mailto:nowhere@mozilla.org">M'envoyer un mail</a></li>
+                    <li><a href="https://github.com/gregoclock">Mon Github</a></li>
+                    <li><a href="https://linkedin.com/gregoclock">Mon profil linkedIn</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+    </body>
+</html>
