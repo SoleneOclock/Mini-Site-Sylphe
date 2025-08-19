@@ -112,6 +112,10 @@ footer a {
 figure {
 
 	width: 100%;
+
+	/* on limite notre rea à 330 pixels car nos images font 330 , donc si ça s'affiche plus grand ça sera moche */
+	max-width: 330px;
+
 	background-color: #333333;
 	border-radius: 1rem;
 	padding-bottom: 0.5rem;
@@ -157,8 +161,25 @@ figure::after {
 
 .figure-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	/* mobile first : 1 colone */
+	grid-template-columns: 1fr;
 	gap: 1.5rem;
+}
+
+/* on passe en mode tablette */
+@media (width > 576px) {
+	.figure-container {
+		/* 2 colones */
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* on passe en mode ordinateur desktop */
+@media (width > 768px) {
+	.figure-container {
+		/* 3 colones */
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 /* on met en display flex les elements qui sont dan sle container : les 4 inputs prenom, nom, email, tel */
